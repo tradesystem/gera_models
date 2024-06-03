@@ -1,0 +1,186 @@
+{
+  "env": {
+    "es6": true,
+    "node": true,
+    "jest": true
+  },
+  "extends": [
+    "plugin:@typescript-eslint/recommended",
+    "prettier",
+    "plugin:prettier/recommended"
+  ],
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 11,
+    "sourceType": "module"
+  },
+  "plugins": [
+    "@typescript-eslint",
+    "eslint-plugin-import-helpers",
+    "prettier"
+  ],
+  "rules": {
+    "prettier/prettier": 0,
+    "arrow-parens": [
+      "error",
+      "always"
+    ],
+    "no-multiple-empty-lines": [
+      "error",
+      {
+        "max": 3,
+        "maxBOF": 1
+      }
+    ],
+    "eqeqeq": [
+      "error",
+      "always"
+    ],
+    "max-len": "off",
+    "comma-dangle": [
+      "error",
+      "always-multiline"
+    ],
+    "eol-last": [
+      "error",
+      "always"
+    ],
+    "no-useless-concat": "off",
+    "no-console": "off",
+    "padded-blocks": [
+      "error",
+      "never"
+    ],
+    "no-unneeded-ternary": "off",
+    "global-require": "off",
+    "import/prefer-default-export": "off",
+    "import/order": "off",
+    "import/extensions": "off",
+    "import-helpers/order-imports": [
+      "warn",
+      {
+        "newlinesBetween": "ignore",
+        "groups": [
+          "/^styled-components/",
+          "/^react/",
+          "/^@react/",
+          "/^@reduxjs/",
+          "/^axios/",
+          "/^accounting/",
+          "/^composh-react/",
+          "/^@material-ui/",
+          "module",
+          "/^@noitada/",
+          "/^@organizer/",
+          "/^@backstage/",
+          "/^@tv/",
+          "/^@databases/",
+          "/^@modules/",
+          "/^@config/",
+          "/^@core/",
+          "/^~/styles/",
+          "/^~/common/",
+          "/^~/navigation/",
+          "/^~/screens/",
+          "/^~/components/",
+          "/^~/models/",
+          "/^~/utils/",
+          "/^~/services/",
+          "absolute",
+          [
+            "parent",
+            "sibling",
+            "index"
+          ]
+        ],
+        "alphabetize": {
+          "order": "asc",
+          "ignoreCase": true
+        }
+      }
+    ],
+    "array-callback-return": "off",
+    "no-new": "off",
+    "no-prototype-builtins": "off",
+    "no-restricted-syntax": "off",
+    "no-useless-constructor": "off",
+    "no-underscore-dangle": "off",
+    "max-classes-per-file": "off",
+    "class-methods-use-this": "off",
+    "react/jsx-key": "off",
+    "no-throw-literal": "off",
+    "@typescript-eslint/indent": "off",
+    "@typescript-eslint/quotes": [
+      "error",
+      "single"
+    ],
+    "@typescript-eslint/semi": [
+      "error",
+      "always"
+    ],
+    "@typescript-eslint/object-curly-spacing": [
+      "error",
+      "always"
+    ],
+    "@typescript-eslint/brace-style": [
+      "error",
+      "stroustrup"
+    ],
+    "no-constant-condition": "off",
+    "no-useless-escape": "off",
+    "camelcase": "off",
+    "@typescript-eslint/camelcase": "off",
+    "@typescript-eslint/ban-types": "off",
+    "@typescript-eslint/naming-convention": [
+      "error",
+      {
+        "selector": "interface",
+        "format": [
+          "PascalCase"
+        ],
+        "custom": {
+          "regex": "^I[A-Z]",
+          "match": true
+        }
+      },
+      {
+        "selector": "enum",
+        "format": [
+          "PascalCase"
+        ],
+        "custom": {
+          "regex": "^E[A-Z]",
+          "match": true
+        }
+      }
+    ],
+    "react/prop-types": "off",
+    "no-use-before-define": "off",
+    "@typescript-eslint/no-use-before-define": [
+      "error",
+      {
+        "variables": false
+      }
+    ],
+    "@typescript-eslint/no-unused-vars": [
+      "warn",
+      {
+        "argsIgnorePattern": "_"
+      }
+    ],
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/explicit-module-boundary-types": "off"
+  },
+  "settings": {
+    "import/resolver": {
+      "typescript": {
+        "directory": "packages/server/*/tsconfig.json"
+      }
+    }
+  }
+}
